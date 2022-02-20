@@ -1,16 +1,17 @@
 /*-----------------------------------------------*/
 .banner {
-    height: 75px;
+    height: 90px;
     margin: 0px -10px 10px;
-    background-color: rgb(66, 196, 247);
+    background-color: rgb(36, 157, 233);
     border-radius: 2px;
 }
 
 .banner h2{
-    color: white;
+    color: rgb(224, 242, 255);
     padding-top: 10px;
     margin-left: 2%;
     display: inline-block;
+    font-size: 6rem
 }
 
 .banner Img{
@@ -19,6 +20,21 @@
     right: 10px;
     height: 75px;
 }
+
+body {
+  margin-top: 0px;
+}
+
+.dash-graph{
+    width:850px;
+    height:500px;
+}
+
+.tablegraph{
+  margin-top: -80px;
+  width:100%;
+}
+
 /*-----------------------------------------------*/
 
 

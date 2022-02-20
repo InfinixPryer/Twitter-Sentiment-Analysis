@@ -3,6 +3,7 @@ from dash import dcc
 from dash import html
 from dash import dash_table as table
 from dash.dependencies import Output, Input, State
+import pyautogui
 # from update_figure import Update
 # import tweepy
 # from tweepy import OAuthHandler
@@ -28,37 +29,40 @@ server = app.server
 app.layout = html.Div([
     html.Div([
         html.H2("Twitter Sentiment Analyzer"),
-        html.Img(src="/assets/stock-icon.png")
+        #html.Img(src="/assets/stock-icon.png")
     ], className="banner"),
 
     html.Div([
-        dcc.Input(id="query", value="#MarvelStudios", type="text"),
+        dcc.Input(id="query", value="#MarvelStudios", type="text" ),
         dcc.Input(id="limit", value=100, type="number"),
         html.Button(id="submit-button", n_clicks=0, children="Submit")
     ]),
 
     html.Div([
 
+         dcc.Graph(
+            id="line_graph",
+            style={'display': 'contents'},
+            className="six columns"
+        ),
         dcc.Graph(
             id="pie_sentiment",
             style={'display': 'inline-block'}
         ),
+        dcc.Graph(
+            id="map",
+            style={'display':'inline-block'}
+        )
         
-         dcc.Graph(
-            id="line_graph",
-            style={'display': 'inline-block'},
-            className="six columns"
-        ),
+        
 
     ]),
 
     html.Div([
         dcc.Graph(
-            id="tweets_table",
+            id="tweets_table",className="tablegraph"
         ),
-        dcc.Graph(
-            id="map",
-        )
+        
         
     ])
 
