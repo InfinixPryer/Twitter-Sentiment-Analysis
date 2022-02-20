@@ -3,7 +3,6 @@ from dash import dcc
 from dash import html
 from dash import dash_table as table
 from dash.dependencies import Output, Input, State
-import pyautogui
 # from update_figure import Update
 # import tweepy
 # from tweepy import OAuthHandler
