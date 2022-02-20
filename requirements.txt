@@ -1,0 +1,10 @@
+tweepy
+dash
+dash-core-components
+dash-html-components
+dash-renderer
+tensorflow-cpu==2.7.0
+gunicorn
+plotly
+pandas
+numpy
